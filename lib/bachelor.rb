@@ -14,8 +14,8 @@ end
 def get_contestant_name(data, occupation)
   data.each do |season, girls|
     girls.each do |attribute|
-      if attribute[:occupation] == occupation
-        return attribute[:name]
+      if attribute["occupation"] == occupation
+        return attribute[:"name"]
       else
         return "Not found"
       end 
@@ -27,7 +27,7 @@ def count_contestants_by_hometown(data, hometown)
   counter = 0
   data.each do |season, girls|
     girls.each do |attribute|
-      if attribute[:hometown] == hometown
+      if attribute["hometown"] == hometown
         counter += 1
       end 
     end
@@ -39,8 +39,8 @@ end
 def get_occupation(data, hometown)
   data.each do |season, girls|
     girls.each do |attribute|
-      if attribute[:hometown] == hometown
-        return attribute[:occupation]
+      if attribute["hometown"] == hometown
+        return attribute["occupation"]
       else
         return "Not found"
       end 
