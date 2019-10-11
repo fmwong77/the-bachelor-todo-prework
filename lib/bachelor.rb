@@ -16,6 +16,8 @@ def get_contestant_name(data, occupation)
     girls.each do |attribute|
       if attribute[:occupation] == occupation
         return attribute[:name]
+      else
+        return "Not found"
       end 
     end
   end
@@ -39,6 +41,8 @@ def get_occupation(data, hometown)
     girls.each do |attribute|
       if attribute[:hometown] == hometown
         return attribute[:occupation]
+      else
+      return "Not found"
       end 
     end
   end
