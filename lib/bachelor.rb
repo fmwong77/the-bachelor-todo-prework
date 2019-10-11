@@ -45,16 +45,11 @@ def get_occupation(data, hometown)
 end
 
 def get_average_age_for_season(data, season)
-  average = []
-  data.each do |key, girls|
-    data.next if season != key
-    
-    girls.each do |attribute|
-      average.push(attribute[:age])
-    end
-    
-    total = average.map {|v| v += v}
-    
-    return total / average.size
+  total_age = 0
+  
+  data[:"#{season}"].each do |contestant|
+    total_age += contestant[:age].to_i
   end
+  average = total_age.to_f/data[:"#{season}"].length
+  average.round
 end
