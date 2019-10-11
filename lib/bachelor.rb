@@ -14,7 +14,7 @@ end
 def get_contestant_name(data, occupation)
   data.each do |season, girls|
     girls.each do |attribute|
-      if attribute["occupation"] == occupation
+      if attribute[:"occupation"] == occupation
         return attribute["name"]
       else
         return "Not found"
