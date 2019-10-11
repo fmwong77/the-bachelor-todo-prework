@@ -42,7 +42,7 @@ def get_occupation(data, hometown)
       if attribute[:hometown] == hometown
         return attribute[:occupation]
       else
-      return "Not found"
+        return "Not found"
       end 
     end
   end
